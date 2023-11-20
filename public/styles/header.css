@@ -1,0 +1,33 @@
+header {
+  margin-top: 0px;
+  height: 520px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color:rgb(214, 148, 33) ;
+  background-image: url('/images/absurdity.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.avatar {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.name h4{
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-family: 'Source+Sans+3', sans-serif;
+  font-size: 40px; 
+  font-weight: lighter; 
+  color: #fff; 
+}

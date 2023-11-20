@@ -1,0 +1,39 @@
+nav {
+  margin-bottom: 0;
+  height: 120px;
+  background-color: #4056A1;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* Align the top edges of the children */
+  padding: 0 1.5em; /* 1.5em padding on the sides */
+  color: #FFFFFF;
+}
+
+.brand {
+  font-family: 'Bungee', sans-serif;
+  font-size: 1.5em;
+  font-weight: normal;
+  margin-top: 1.5em; /* Adjust the top margin to align with the design */
+}
+
+.new-tweet-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Align the text right */
+  margin-top: 2.0em; /* Adjust the top margin to align with the design */
+  
+}
+
+.new-tweet-container h4 {
+  font-family: 'Source+Sans+3', sans-serif;
+  font-weight: normal;
+  color: #FFFFFF;
+  margin: 0; /* Remove default margins */
+  padding: 0; /* Remove any padding */
+}
+
+.new-tweet-container i {
+  color: red; /* Icon color */
+  padding-top: 8px; /* Small gap between text and icon */
+  font-size: 1 em; /* Adjust the icon size as necessary */
+}

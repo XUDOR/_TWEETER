@@ -1,0 +1,61 @@
+.new-tweet {
+  max-width: 600px; /* Adjust the width as needed */
+  margin: auto; /* This centers the section */
+  padding: 20px; /* Add some padding */
+  border-bottom: 2px solid #000; /* Border as per your design */
+}
+
+
+.new-tweet h2 {
+  text-align: center;
+}
+
+.new-tweet {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* This will center-align the child elements */
+  padding: 20px; /* Add some padding */
+  border-bottom: 2px solid #000; /* Adjust color and thickness as needed */
+}
+
+.new-tweet form > div {
+  display: flex;
+  justify-content: space-between; /* Aligns children to opposite ends */
+  align-items: center; /* Centers children vertically */
+  margin-top: 15px; /* Adds some space above the button and counter */
+}
+
+button {
+  background-color: #4056A1;
+  border: none;
+  border-radius: 1px; /* This will make the button corners rounded */
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  font-family: 'Bungee', sans-serif;
+}
+
+textarea {
+  background-color: #f4f1ec;
+  width: 100%; /* Full width */
+  padding: 12px 20px;
+  margin: 8px 0;
+  border-radius: 0%;
+  box-sizing: border-box;
+  resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+.counter {
+  text-align: right;
+  font-size: 16px;
+  padding: 0 10px; /* Adjust as needed */
+}
+
+.counter.invalid {
+  color: red;
+}

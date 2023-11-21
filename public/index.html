@@ -18,13 +18,14 @@
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
-
+    <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
+    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
   </head>
 
   <body>
@@ -48,6 +49,26 @@
 
 
     <!-- Page-specific (main) content here -->
-    <main class="container"></main>
+    <main class="container">
+        <h1>Heading 1</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <!-- Add more tags as needed for testing -->
+      <!-- Page-specific (main) content here -->
+  <!-- New Tweet form starts here -->
+  <section class="new-tweet">
+    <h2>Compose Tweet</h2>
+    <form action="/tweets" method="post">
+      <label for="tweet-text">What are you humming about?</label>
+      <textarea name="text" id="tweet-text"></textarea>
+      <div>
+        <button type="submit">Tweet</button>
+        <output name="counter" class="counter" for="tweet-text">140</output>
+      </div>
+    </form>
+  </section>
+  <!-- New Tweet form ends here -->
+
+  <!-- Other content can continue after the form -->
+    </main>
   </body>
 </html>

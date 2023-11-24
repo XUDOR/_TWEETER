@@ -2,20 +2,14 @@
   max-width: 600px; /* Adjust the width as needed */
   margin: auto; /* This centers the section */
   padding: 20px; /* Add some padding */
-  border-bottom: 2px solid #000; /* Border as per your design */
-}
-
-
-.new-tweet h2 {
-  text-align: center;
-}
-
-.new-tweet {
   display: flex;
   flex-direction: column;
   align-items: flex-start; /* This will center-align the child elements */
   padding: 20px; /* Add some padding */
-  border-bottom: 2px solid #000; /* Adjust color and thickness as needed */
+}
+
+.new-tweet h2 {
+  text-align: center;
 }
 
 .new-tweet form > div {
@@ -43,8 +37,13 @@ button {
 textarea {
   background-color: #f4f1ec;
   width: 100%; /* Full width */
+  height: 36px;
   padding: 12px 20px;
   margin: 8px 0;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: 2px solid #000;
   border-radius: 0%;
   box-sizing: border-box;
   resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */

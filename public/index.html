@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/tweet.css" type="text/css" />
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -53,19 +54,39 @@
         <!-- Add more tags as needed for testing -->
       <!-- Page-specific (main) content here -->
   <!-- New Tweet form starts here -->
-  <section class="new-tweet">
-    <h2>Compose Tweet</h2>
-    <form action="/tweets" method="post">
-      <label for="tweet-text">What are you humming about?</label>
-      <textarea name="text" id="tweet-text"></textarea>
+      <section class="new-tweet">
+        <h2>Compose Tweet</h2>
+        <form action="/tweets" method="post">
+        <label for="tweet-text">What are you humming about?</label>
+        <textarea name="text" id="tweet-text"></textarea>
       
-      <div>
-        <button type="submit">Tweet</button>
-        <output name="counter" class="counter" for="tweet-text">140</output>
-      </div>
-    </form>
-  </section>
+        <div>
+          <button type="submit">Tweet</button>
+          <output name="counter" class="counter" for="tweet-text">140</output>
+        </div>
+        </form>
+      </section>
   <!-- New Tweet form ends here -->
+      <section class="tweet-list">
+        <article class="tweet">
+          <header class="tweet-header">
+            <div class="picture">
+              <img src="https://i.imgur.com/nlhLi3I.png">
+            </div>
+            <div class="name">RODUX</div>
+            <div class="user">rdxenv</div>  
+          </header>
+          <section class="old-tweet">Roderick is a terrible DJ</section>
+
+          <footer>
+            <div class="tweet-date">10 days</div>
+            <div class="icons"></div>
+            
+          </footer>
+        </article>
+
+
+      </section>
 
   <!-- Other content can continue after the form -->
     </main>

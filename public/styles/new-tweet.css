@@ -34,7 +34,7 @@ button {
   font-family: 'Bungee', sans-serif;
 }
 
-textarea {
+textarea, .old-tweet {
   background-color: #f4f1ec;
   width: 100%; /* Full width */
   height: 36px;

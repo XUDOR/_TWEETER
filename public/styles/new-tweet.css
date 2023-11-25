@@ -52,10 +52,7 @@ textarea {
 textarea:focus {
   outline: none;
   background-color: ivory;
-}
-
-textarea:hover {
-  border-color: #4056A1;
+  border-radius: 2px;
 }
 
 .counter {

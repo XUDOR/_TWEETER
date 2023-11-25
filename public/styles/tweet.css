@@ -1,3 +1,48 @@
+.tweet-header {
+  display: flex;
+  align-items: center;
+
+}
+
 .tweet {
-  background-color: teal;
+  border: 4px solid black;
+  background-color: #f4f1ec;
+}
+
+.tweet:hover {
+box-shadow: inset;
+
+}
+
+.picture  {
+  padding: 15px;
+  margin-right: 20px;
+}
+
+.name {
+  font-weight: 1em;
+}
+
+.user {
+  color: #bdc2c6;
+  margin-left: auto;
+  padding: 25px;
+}
+
+.old-tweet {
+  font-weight: bold;
+  padding: 15px;
+  margin: 15px;
+  background-color: #f4f1ec;
+  border-bottom: 3px solid black;
+  position: relative;  
+}
+
+.tweet-date {
+  font-size: 20px;
+  font-weight: bold;
+padding-left: 30px;
+padding-bottom: 20px;
+
+
 }

@@ -1,3 +1,5 @@
+console.log("client.js-found");
+
 const data = [
   {
     "user": {
@@ -21,20 +23,42 @@ const data = [
     },
     "created_at": 1461113959088
   }
-]
+];
 
 const renderTweets = function(tweets) {
-// loops through tweets
-// calls createTweetElement for each tweet
-// takes return value and appends it to the tweets container
-}
+  console.log("render");
+  tweets.forEach(tweet => {
+    const $tweet = createTweetElement(tweet);
+    $('.tweet-list').append($tweet);
+  });
+};
+
 
 const createTweetElement = function(tweet) {
-let $tweet = /* Your code for creating the tweet element */
-// ...
-return $tweet;
-}
+  console.log("create");
+  let $tweet = $('<article>').addClass('tweet');
+  $tweet.html(`
+    <header class="tweet-header">
+      <div class="picture">
+        <img src="${tweet.user.avatars}">
+      </div>
+      <div class="name">${tweet.user.name}</div>
+      <div class="user">${tweet.user.handle}</div>  
+    </header>
+    <section class="old-tweet">${tweet.content.text}</section>
+    <footer>
+      <div class="tweet-date">${new Date(tweet.created_at).toLocaleString()}</div>
+      <div class="icons">
+        <i class="fa-solid fa-flag"></i>
+        <i class="fa-solid fa-retweet"></i>
+        <i class="fa-solid fa-heart"></i>
+      </div>
+    </footer>
+  `);
+  return $tweet;
+};
 
-renderTweets(data);
-
-Note
+$(document).ready(function() {
+  console.log('doc-ready');
+  renderTweets(data);
+});

@@ -33,15 +33,28 @@ $(document).ready(function() {
     </footer>
   `);
 
-  const timeagoDate = timeago.format(new Date(tweet.created_at));
-  $tweet.find('.tweet-date').text(timeagoDate);
+    const timeagoDate = timeago.format(new Date(tweet.created_at));
+    $tweet.find('.tweet-date').text(timeagoDate);
 
     return $tweet;
   };
   $('#tweet-form').submit(function(event) {
     event.preventDefault();
+
+    const tweetText = $('#tweet-text').val();
+    const tweetLength = tweetText.length;
+
+    if (tweetLength === 0) {
+      alert("Oops! Your tweet is empty.");
+      return;
+    } else if (tweetLength > 140) {
+      alert("Oops! Your tweet is too long. Maximum character allowed is 140.");
+      return;
+    }
+
     const serializedData = $(this).serialize();
     console.log('form being sent', serializedData);
+
     $.post('/tweets', serializedData, function(response) {
       console.log('tweet submitted:', response);   
     }).fail(function(error) {

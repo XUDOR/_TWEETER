@@ -1,31 +1,7 @@
 console.log("client.js-found");
+
 $(document).ready(function() {
   console.log('doc-ready');
-
-  const data = [
-    {
-      "user": {
-        "name": "Newton",
-        "avatars": "https://i.imgur.com/73hZDYK.png"
-        ,
-        "handle": "@SirIsaac"
-      },
-      "content": {
-        "text": "If I have seen further it is by standing on the shoulders of giants"
-      },
-      "created_at": 1461116232227
-    },
-    {
-      "user": {
-        "name": "Descartes",
-        "avatars": "https://i.imgur.com/nlhLi3I.png",
-        "handle": "@rd" },
-      "content": {
-        "text": "Je pense , donc je suis"
-      },
-      "created_at": 1461113959088
-    }
-  ];
 
   const renderTweets = function(tweets) {
     console.log("render");
@@ -34,7 +10,6 @@ $(document).ready(function() {
       $('.tweet-list').append($tweet);
     });
   };
-
 
   const createTweetElement = function(tweet) {
     console.log("create");
@@ -57,6 +32,10 @@ $(document).ready(function() {
       </div>
     </footer>
   `);
+
+  const timeagoDate = timeago.format(new Date(tweet.created_at));
+  $tweet.find('.tweet-date').text(timeagoDate);
+
     return $tweet;
   };
   $('#tweet-form').submit(function(event) {
@@ -64,11 +43,27 @@ $(document).ready(function() {
     const serializedData = $(this).serialize();
     console.log('form being sent', serializedData);
     $.post('/tweets', serializedData, function(response) {
-      console.log('tweet submitted:', response);
-      
+      console.log('tweet submitted:', response);   
     }).fail(function(error) {
       console.error('Error submitting tweet:', error);
     });
   });
-  renderTweets(data);
+
+
+  function loadTweets() {
+    $.ajax({
+      url: '/tweets',
+      method: 'GET',
+      dataType: 'json',
+      success: function(tweets) {
+      renderTweets(tweets);
+      },
+      error: function(error) {
+        console.log('Error fetching tweets:', error);  
+      }
+    });
+}
+
+  loadTweets();
+
 });

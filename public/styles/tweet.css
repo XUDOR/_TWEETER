@@ -7,6 +7,7 @@
 .tweet {
   border: 4px solid black;
   background-color: #f4f1ec;
+  margin-bottom: 20px;
 }
 
 .tweet:hover {

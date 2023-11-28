@@ -58,6 +58,9 @@
   <!-- New Tweet form starts here -->
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
+
+        <div id="error-message" style="display: none; color: red; margin-bottom: 10px;"></div>
+
         <form action="/tweets" method="post" id="tweet-form">
         <label for="tweet-text">What are you humming about?</label>
         <textarea name="text" id="tweet-text"></textarea>

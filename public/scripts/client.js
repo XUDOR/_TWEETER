@@ -46,12 +46,14 @@ $(document).ready(function() {
 
     const tweetText = $('#tweet-text').val();
     const tweetLength = tweetText.length;
+    
+    $('#error-message').slideUp();
 
     if (tweetLength === 0) {
-      alert("Oops! Your tweet is empty.");
+      $('#error-message').text("Oops! Your tweet is empty.").slideDown();
       return;
     } else if (tweetLength > 140) {
-      alert("Oops! Your tweet is too long. Maximum character allowed is 140.");
+      $('#error-message').text("Oops! Your tweet is too long. Maximum character allowed is 140.").slideDown();
       return;
     }
 

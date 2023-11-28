@@ -51,7 +51,7 @@ textarea {
 
 textarea:focus {
   outline: none;
-  background-color: ivory;
+  background-color: #f4f1ec;
   border-radius: 2px;
 }
 

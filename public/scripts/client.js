@@ -12,38 +12,34 @@ $(document).ready(function() {
   };
 
   const createTweetElement = function(tweet) {
-    const avatarSrc = tweet.user.avatars || 'default-avatar-path'; // Update with a valid default path
-    const userName = tweet.user.name || 'Unknown User';
-    const userHandle = tweet.user.handle || '@unknown';
-    const tweetText = tweet.content.text || 'No text provided';
-    const createdAt = new Date(tweet.created_at).toLocaleString();
+    // Create the main tweet article element
+    let $tweet = $('<article>').addClass('tweet');
   
-    let $tweet = $(`
-      <article class="tweet">
-        <header class="tweet-header">
-          <div class="picture">
-            <img src="${avatarSrc}">
-          </div>
-          <div class="name">${userName}</div>
-          <div class="user">${userHandle}</div>  
-        </header>
-        <section class="old-tweet">${tweetText}</section>
-        <footer>
-          <div class="tweet-date">${createdAt}</div>
-          <div class="icons">
-            <i class="fa-solid fa-flag"></i>
-            <i class="fa-solid fa-retweet"></i>
-            <i class="fa-solid fa-heart"></i>
-          </div>
-        </footer>
-      </article>
-    `);
+    // Header
+    let $header = $('<header>').addClass('tweet-header');
+    let $picture = $('<div>').addClass('picture');
+    $picture.append($('<img>').attr('src', tweet.user.avatars || 'default-avatar-path'));
+    $header.append($picture);
+    $header.append($('<div>').addClass('name').text(tweet.user.name || 'Unknown User'));
+    $header.append($('<div>').addClass('user').text(tweet.user.handle || '@unknown'));
   
-    const timeagoDate = timeago.format(new Date(tweet.created_at));
-    $tweet.find('.tweet-date').text(timeagoDate);
-    
+    // Tweet Content
+    let $tweetContent = $('<section>').addClass('old-tweet').text(tweet.content.text || 'No text provided');
+  
+    // Footer
+    let $footer = $('<footer>');
+    let $date = $('<div>').addClass('tweet-date').text(timeago.format(new Date(tweet.created_at)));
+    let $icons = $('<div>').addClass('icons');
+    // ... Add icons to $icons here ...
+  
+    $footer.append($date, $icons);
+  
+    // Assemble the complete tweet
+    $tweet.append($header, $tweetContent, $footer);
+  
     return $tweet;
   };
+  
 
   $('#tweet-form').submit(function(event) {
     event.preventDefault();

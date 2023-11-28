@@ -1,4 +1,10 @@
 Tweeter Project 
+
+
+![Screenshot description](https://raw.githubusercontent.com/XUDOR/_TWEETER/7da0ded874934777bd0a55fc6bfa0ad7a8e5d132/docs/_Tweeter-pic.png)
+
+
+
 _________________________
 Roderick Shoolbraid
 

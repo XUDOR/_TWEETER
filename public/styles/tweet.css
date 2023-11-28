@@ -73,3 +73,13 @@ padding-bottom: 20px;
   transform: scale(1.1); 
   cursor: pointer;
 }
+
+#error-message {
+  color: red;
+  background-color: #f4f1ec;
+  border: 4px solid red ;
+  padding: 10px;
+  margin-bottom: 20px;
+  display: none;
+
+}

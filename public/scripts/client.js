@@ -12,7 +12,7 @@ $(document).ready(function() {
   };
 
   const createTweetElement = function(tweet) {
-    // Create the main tweet article element
+    
     let $tweet = $('<article>').addClass('tweet');
   
     // Header
@@ -30,7 +30,7 @@ $(document).ready(function() {
     let $footer = $('<footer>');
     let $date = $('<div>').addClass('tweet-date').text(timeago.format(new Date(tweet.created_at)));
     let $icons = $('<div>').addClass('icons');
-    // ... Add icons to $icons here ...
+    // icons 
   
     $footer.append($date, $icons);
   

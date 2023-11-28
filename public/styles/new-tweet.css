@@ -1,11 +1,11 @@
 .new-tweet {
-  max-width: 600px; /* Adjust the width as needed */
-  margin: auto; /* This centers the section */
-  padding: 20px; /* Add some padding */
+  max-width: 600px; 
+  margin: auto; 
+  padding: 20px; 
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* This will center-align the child elements */
-  padding: 20px; /* Add some padding */
+  align-items: flex-start; 
+  padding: 20px; /
 }
 
 .new-tweet h2 {
@@ -14,15 +14,15 @@
 
 .new-tweet form > div {
   display: flex;
-  justify-content: space-between; /* Aligns children to opposite ends */
-  align-items: center; /* Centers children vertically */
-  margin-top: 15px; /* Adds some space above the button and counter */
+  justify-content: space-between; 
+  align-items: center; 
+  margin-top: 15px; 
 }
 
 button {
   background-color: #4056A1;
   border: none;
-  border-radius: 1px; /* This will make the button corners rounded */
+  border-radius: 1px;
   color: white;
   padding: 15px 32px;
   text-align: center;
@@ -36,7 +36,7 @@ button {
 
 textarea {
   background-color: #f4f1ec;
-  width: 100%; /* Full width */
+  width: 100%; 
   height: 36px;
   padding: 12px 20px;
   margin: 8px 0;

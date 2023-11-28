@@ -1,4 +1,4 @@
-*Tweeter Project 
+Tweeter Project 
 _________________________
 Roderick Shoolbraid
 

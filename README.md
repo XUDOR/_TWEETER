@@ -25,5 +25,5 @@ Body-parser
 Chance
 md5
 Final Notes
-This project was created as part of [Your School or Course Name]'s web development curriculum. It's a learning exercise to understand the basics of web development, focusing on front-end technologies and basic server-side scripting.
+This project was created as part of Lighthouse Labs's web development curriculum. It's a learning exercise to understand the basics of web development, focusing on front-end technologies and basic server-side scripting.
 

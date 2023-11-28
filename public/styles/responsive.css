@@ -1,0 +1,12 @@
+/* Tablet styles */
+@media screen and (min-width: 768px) {
+  display: flex-wrap: ;;
+  /* Tablet-specific styles */
+}
+
+/* Desktop styles */
+@media screen and (min-width: 1024px) {
+  display: flex-direction: ;;
+
+  /* Desktop-specific styles */
+}

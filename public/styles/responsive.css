@@ -1,12 +1,18 @@
 /* Tablet styles */
 @media screen and (min-width: 768px) {
-  display: flex-wrap: ;;
-  /* Tablet-specific styles */
+  nav {
+    background-color:rgb(214, 148, 33) ;
+    background-image: url('/images/absurdity.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+  }
 }
 
 /* Desktop styles */
 @media screen and (min-width: 1024px) {
-  display: flex-direction: ;;
-
+  nav {
+    background-color: #4056A1;
+  }
   /* Desktop-specific styles */
 }

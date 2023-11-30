@@ -30,9 +30,16 @@ $(document).ready(function() {
     let $footer = $('<footer>');
     let $date = $('<div>').addClass('tweet-date').text(timeago.format(new Date(tweet.created_at)));
     let $icons = $('<div>').addClass('icons');
-    // icons 
-  
-    $footer.append($date, $icons);
+    // icons
+   
+      //        
+    //    <i class="fa-solid fa-heart"></i>
+
+    $icons.append($('<i class="fa-solid fa-flag"></i>'));
+    $icons.append($('<i class="fa-solid fa-retweet"></i>'));
+    $icons.append($('<i class="fa-solid fa-heart"></i>'));
+
+    $footer.append($date, $icons,);
   
     // Assemble the complete tweet
     $tweet.append($header, $tweetContent, $footer);

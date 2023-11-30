@@ -1,11 +1,12 @@
 .new-tweet {
-  max-width: 600px; 
-  margin: auto; 
-  padding: 20px; 
+  min-width: 80%; 
+  margin-top: 20ox;
+  margin-bottom: auto;
+  padding-top: 85px;
   display: flex;
   flex-direction: column;
-  align-items: flex-start; 
-  padding: 20px; /
+  
+  
 }
 
 .new-tweet h2 {
@@ -16,7 +17,7 @@
   display: flex;
   justify-content: space-between; 
   align-items: center; 
-  margin-top: 15px; 
+  margin-top: 5px; 
 }
 
 button {
@@ -43,7 +44,7 @@ textarea {
   border-top: none;
   border-right: none;
   border-left: none;
-  border-bottom: 2px solid #000;
+  border-bottom: 4px solid #000;
   border-radius: 0%;
   box-sizing: border-box;
   resize: vertical; 
